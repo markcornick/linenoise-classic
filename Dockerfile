@@ -1,3 +1,3 @@
 FROM scratch
-COPY genpw /
-ENTRYPOINT ["/genpw"]
+COPY linenoise-classic /
+ENTRYPOINT ["/linenoise-classic"]
