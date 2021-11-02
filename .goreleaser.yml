@@ -1,0 +1,119 @@
+---
+builds:
+  - binary: linenoise-classic
+    id: linenoise-classic
+    goos:
+      - darwin
+      - dragonfly
+      - freebsd
+      - illumos
+      - js
+      - linux
+      - netbsd
+      - openbsd
+      - plan9
+      - solaris
+      - windows
+    goarch:
+      - 386
+      - amd64
+      - arm
+      - arm64
+      - wasm
+    goarm:
+      - 6
+      - 7
+    ldflags:
+      - -s -w -X main.version={{.Version}} -X main.commit={{.Commit}} -X main.date={{.CommitDate}} -X main.builtBy=goreleaser
+    mod_timestamp: "{{ .CommitTimestamp }}"
+checksum:
+  name_template: "checksums.txt"
+snapshot:
+  name_template: "{{ .Tag }}-next"
+changelog:
+  use: github
+  sort: asc
+  filters:
+    exclude:
+      - "^docs:"
+      - "^test:"
+nfpms:
+  - vendor: Mark Cornick
+    homepage: https://markcornick.com/
+    maintainer: Mark Cornick <mark@markcornick.com>
+    description: Generates strings that can be used as reasonably secure passwords.
+    license: MIT
+    formats:
+      - apk
+      - deb
+      - rpm
+    deb:
+      signature:
+        key_file: "{{ .Env.GPG_KEY_PATH }}"
+        type: origin
+    rpm:
+      signature:
+        key_file: "{{ .Env.GPG_KEY_PATH }}"
+snapcrafts:
+  - publish: true
+    summary: Generates strings that can be used as reasonably secure passwords.
+    description: linenoise-classic is a command-line tool that generates strings of random characters that can be used as reasonably secure passwords.
+    grade: stable
+    confinement: strict
+    license: MIT
+    apps:
+      linenoise-classic:
+brews:
+  - tap:
+      owner: markcornick
+      name: homebrew-tap
+    commit_author:
+      name: Mark Cornick
+      email: mark@markcornick.com
+    homepage: "https://github.com/markcornick/linenoise-classic"
+    description: "Generates strings that can be used as reasonably secure passwords."
+    install: 'bin.install "linenoise-classic"'
+scoop:
+  bucket:
+    owner: markcornick
+    name: scoop-bucket
+  commit_author:
+    name: Mark Cornick
+    email: mark@markcornick.com
+  homepage: "https://github.com/markcornick/linenoise-classic"
+  description: "Generates strings that can be used as reasonably secure passwords."
+  license: MIT
+release:
+  github:
+    owner: markcornick
+    name: linenoise-classic
+  prerelease: auto
+dockers:
+  - goos: linux
+    goarch: amd64
+    image_templates:
+      - "markcornick/linenoise-classic:{{ .Tag }}"
+      - "markcornick/linenoise-classic:v{{ .Major }}"
+      - "markcornick/linenoise-classic:v{{ .Major }}.{{ .Minor }}"
+      - "markcornick/linenoise-classic:latest"
+      - "ghcr.io/markcornick/linenoise-classic:{{ .Tag }}"
+      - "ghcr.io/markcornick/linenoise-classic:v{{ .Major }}"
+      - "ghcr.io/markcornick/linenoise-classic:v{{ .Major }}.{{ .Minor }}"
+      - "ghcr.io/markcornick/linenoise-classic:latest"
+signs:
+  - artifacts: checksum
+furies:
+  - account: markcornick
+rigs:
+  - rig:
+      owner: markcornick
+      name: gofish-rig
+    commit_author:
+      name: Mark Cornick
+      email: mark@markcornick.com
+    homepage: "https://github.com/markcornick/linenoise-classic"
+    description: "Generates strings that can be used as reasonably secure passwords."
+    license: MIT
+    goarm: 6
+universal_binaries:
+  - replace: true
