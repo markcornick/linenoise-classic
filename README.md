@@ -1,19 +1,18 @@
-# genpw
+# linenoise-classic
 
-![Release](https://img.shields.io/github/release/markcornick/genpw.svg)
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/markcornick/genpw/goreleaser)
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/markcornick/genpw/mkdocs?label=docs)
-![License](https://img.shields.io/github/license/markcornick/genpw)
+![Release](https://img.shields.io/github/release/markcornick/linenoise-classic.svg)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/markcornick/linenoise-classic/goreleaser)
+![License](https://img.shields.io/github/license/markcornick/linenoise-classic)
 
-genpw is a command-line tool that generates strings of random characters
+linenoise-classic is a command-line tool that generates strings of random characters
 that can be used as reasonably secure passwords.
 
-Full documentation is available at https://markcornick.com/genpw/.
+Full documentation is available at https://markcornick.com/linenoise-classic/.
 
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at
-https://github.com/markcornick/genpw.
+https://github.com/markcornick/linenoise-classic.
 
 This project is intended to be a safe, welcoming space for
 collaboration, and contributors are expected to adhere to the
@@ -22,4 +21,4 @@ conduct.
 
 ## License
 
-genpw is available as open source under the terms of the MIT License.
+linenoise-classic is available as open source under the terms of the MIT License.
