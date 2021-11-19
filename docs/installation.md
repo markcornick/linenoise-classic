@@ -7,13 +7,13 @@
 
 === "Scoop"
     ```bash
-    scoop bucket add markcornick https://github.com/markcornick/scoop-bucket.git
+    scoop bucket add markcornick https://git.sr.ht/~mcornick/scoop-bucket.git
     scoop install linenoise-classic
     ```
 
 === "GoFish"
     ```bash
-    gofish rig add https://github.com/markcornick/gofish-rig.git
+    gofish rig add https://git.sr.ht/~mcornick/gofish-rig.git
     gofish install linenoise-classic
     ```
 
@@ -31,9 +31,9 @@
 
 === "Binaries and RPM/DEB/APK packages"
 
-    [Here.](https://github.com/markcornick/linenoise-classic/releases)
+    [Here.](https://git.sr.ht/~mcornick/linenoise-classic/releases)
     Checksums from that page are signed with [my GPG
-    key](https://github.com/markcornick.gpg).
+    key](https://meta.sr.ht/~mcornick.pgp).
 
     RPM and DEB packages are also available from my Yum and Apt
     repositories, respectively:

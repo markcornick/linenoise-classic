@@ -1,9 +1,5 @@
 # linenoise-classic
 
-![Release](https://img.shields.io/github/release/markcornick/linenoise-classic.svg)
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/markcornick/linenoise-classic/goreleaser)
-![License](https://img.shields.io/github/license/markcornick/linenoise-classic)
-
 linenoise-classic is a command-line tool that generates strings of
 random characters that can be used as reasonably secure passwords.
 
@@ -12,8 +8,8 @@ https://markcornick.com/linenoise-classic/.
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at
-https://github.com/markcornick/linenoise-classic.
+Bug reports are welcome on Sourcehut at
+https://todo.sr.ht/~mcornick/linenoise.
 
 This project is intended to be a safe, welcoming space for
 collaboration, and contributors are expected to adhere to the

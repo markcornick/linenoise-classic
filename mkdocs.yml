@@ -22,14 +22,13 @@ plugins:
   - search
   - social
 repo_name: markcornick/linenoise-classic
-repo_url: https://github.com/markcornick/linenoise-classic/
+repo_url: https://git.sr.ht/~mcornick/linenoise-classic/
 site_author: Mark Cornick
 site_description: Generates strings that can be used as reasonably secure passwords
 site_name: linenoise-classic
 theme:
   icon:
     logo: material/book
-    repo: fontawesome/brands/github
   name: material
   palette:
     - scheme: default
