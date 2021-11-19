@@ -1,4 +1,4 @@
-image: ubuntu/latest
+image: ubuntu/lts
 packages:
   - python3-pip
 oauth: pages.sr.ht/PAGES:RW
