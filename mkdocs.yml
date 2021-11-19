@@ -1,9 +1,5 @@
 ---
 copyright: Copyright &copy; 2017-2021 Mark Cornick
-extra:
-  social:
-    - icon: fontawesome/brands/twitter
-      link: https://twitter.com/markcornick
 markdown_extensions:
   - admonition
   - pymdownx.highlight
@@ -20,7 +16,6 @@ plugins:
   - minify:
       minify_html: true
   - search
-  - social
 repo_name: markcornick/linenoise-classic
 repo_url: https://git.sr.ht/~mcornick/linenoise-classic/
 site_author: Mark Cornick
