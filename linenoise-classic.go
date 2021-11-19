@@ -28,7 +28,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/markcornick/linenoise"
+	"git.sr.ht/~mcornick/linenoise"
 )
 
 var (
