@@ -5,6 +5,7 @@ oauth: pages.sr.ht/PAGES:RW
 tasks:
   - mkdocs: |
       pip3 install mkdocs-material mkdocs-minify-plugin mkdocs-git-revision-date-localized-plugin
+      cd linenoise-classic
       /home/build/.local/bin/mkdocs build
       tar -C site -cvz . > site.tar.gz
       acurl -Fcontent=@site.tar.gz https://pages.sr.ht/publish/linenoise.mcornick.com
