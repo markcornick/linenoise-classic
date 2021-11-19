@@ -1,10 +1,10 @@
-image: alpine/latest
+image: ubuntu/latest
 packages:
-  - py3-pip
+  - python3-pip
 oauth: pages.sr.ht/PAGES:RW
 tasks:
   - mkdocs: |
-      pip3 install mkdocs-material mkdocs-minify-plugin mkdocs-git-revision-date-localized-plugin
+      pip3 install --user mkdocs-material mkdocs-minify-plugin mkdocs-git-revision-date-localized-plugin
       cd linenoise-classic
       /home/build/.local/bin/mkdocs build
       tar -C site -cvz . > site.tar.gz
