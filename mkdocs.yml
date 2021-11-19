@@ -16,7 +16,7 @@ plugins:
   - minify:
       minify_html: true
   - search
-repo_name: markcornick/linenoise-classic
+repo_name: ~mcornick/linenoise-classic
 repo_url: https://git.sr.ht/~mcornick/linenoise-classic/
 site_author: Mark Cornick
 site_description: Generates strings that can be used as reasonably secure passwords
