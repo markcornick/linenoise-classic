@@ -37,11 +37,11 @@ var (
 
 func main() {
 	var (
-		length      = 16
-		upper       = true
-		lower       = true
-		digit       = true
-		showVersion = false
+		length      int
+		upper       bool
+		lower       bool
+		digit       bool
+		showVersion bool
 	)
 
 	// Process command line flags.
