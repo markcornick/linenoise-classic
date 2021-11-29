@@ -1,0 +1,67 @@
+---
+name: goreleaser
+on:
+  push:
+    tags:
+      - "*"
+  pull_request:
+permissions:
+  contents: write
+jobs:
+  goreleaser:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Set up Go
+        uses: actions/setup-go@v2
+        with:
+          go-version: 1.17
+      - name: Set up Snapcraft
+        run: |
+          sudo apt-get update
+          sudo apt-get -yq --no-install-suggests --no-install-recommends install snapcraft
+          mkdir -p $HOME/.cache/snapcraft/download
+          mkdir -p $HOME/.cache/snapcraft/stage-packages
+      - name: Import GPG key
+        id: import_gpg
+        uses: crazy-max/ghaction-import-gpg@v4
+        with:
+          gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
+          passphrase: ${{ secrets.PASSPHRASE }}
+      - name: Cache GPG key to file
+        run: 'echo "$GPG_PRIVATE_KEY" > /home/runner/gpgkey.asc && chmod 600 /home/runner/gpgkey.asc'
+        shell: bash
+        env:
+          GPG_PRIVATE_KEY: ${{secrets.GPG_PRIVATE_KEY}}
+      - name: Login to Docker Hub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v1
+        with:
+          registry: ghcr.io
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.GH_PAT }}
+      - name: Snapcraft Login
+        run: snapcraft login --with <(echo "${{ secrets.SNAPCRAFT_LOGIN }}")
+      - name: Run GoReleaser
+        uses: goreleaser/goreleaser-action@v2
+        with:
+          distribution: goreleaser-pro
+          version: latest
+          args: release --rm-dist
+        env:
+          FURY_TOKEN: ${{ secrets.FURY_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+          GORELEASER_KEY: ${{ secrets.GORELEASER_KEY }}
+          GPG_FINGERPRINT: ${{ steps.import_gpg.outputs.fingerprint }}
+          NFPM_DEFAULT_PASSPHRASE: ${{ secrets.PASSPHRASE }}
+          GPG_KEY_PATH: "/home/runner/gpgkey.asc"
+      - name: Clean up GPG key
+        run: rm /home/runner/gpgkey.asc
+        shell: bash
