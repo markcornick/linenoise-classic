@@ -59,9 +59,14 @@ func main() {
 	}
 
 	// Assemble params.
-	p := linenoise.Parameters{Length: length, Upper: upper, Lower: lower, Digit: digit}
+	p := linenoise.Parameters{
+		Length: length,
+		Upper:  upper,
+		Lower:  lower,
+		Digit:  digit,
+	}
 
-	// Otherwise, generate a password, then print it.
+	// Generate a password, then print it.
 	result, err := linenoise.Noise(p)
 	if err != nil {
 		log.Fatal(err)
