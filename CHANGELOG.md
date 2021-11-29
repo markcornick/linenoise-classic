@@ -1,3 +1,10 @@
+## v1.0.3 (2021-11-28)
+
+### Fix
+
+- move back to Github
+- no need to specify defaults twice
+
 ## v1.0.2 (2021-11-18)
 
 ### Fix
