@@ -102,8 +102,6 @@ dockers:
       - "ghcr.io/markcornick/linenoise-classic:latest"
 signs:
   - artifacts: checksum
-furies:
-  - account: markcornick
 rigs:
   - rig:
       owner: markcornick
