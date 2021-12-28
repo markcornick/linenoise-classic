@@ -20,7 +20,6 @@ plugins:
   - minify:
       minify_html: true
   - search
-  - social
 repo_name: markcornick/linenoise-classic
 repo_url: https://github.com/markcornick/linenoise-classic/
 site_author: Mark Cornick
