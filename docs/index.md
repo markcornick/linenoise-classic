@@ -1,3 +1,5 @@
+# linenoise-classic
+
 linenoise-classic is a command-line tool that generates strings of
 random characters that can be used as reasonably secure passwords.
 
