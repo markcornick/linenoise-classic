@@ -102,16 +102,5 @@ dockers:
       - "ghcr.io/markcornick/linenoise-classic:latest"
 signs:
   - artifacts: checksum
-rigs:
-  - rig:
-      owner: markcornick
-      name: gofish-rig
-    commit_author:
-      name: Mark Cornick
-      email: mark@markcornick.com
-    homepage: "https://github.com/markcornick/linenoise-classic"
-    description: "Generates strings that can be used as reasonably secure passwords."
-    license: MIT
-    goarm: 6
 universal_binaries:
   - replace: true

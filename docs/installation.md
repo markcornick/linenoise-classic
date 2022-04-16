@@ -13,13 +13,6 @@ scoop bucket add markcornick https://github.com/markcornick/scoop-bucket.git
 scoop install linenoise-classic
 ```
 
-## GoFish
-
-```bash
-gofish rig add https://github.com/markcornick/gofish-rig.git
-gofish install linenoise-classic
-```
-
 ## Snap
 
 ```bash
