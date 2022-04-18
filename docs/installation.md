@@ -1,34 +1,34 @@
 # Installation
 
-## Homebrew
+=== "Homebrew"
 
-```bash
-brew install markcornick/tap/linenoise-classic
-```
+    ```bash
+    brew install markcornick/tap/linenoise-classic
+    ```
 
-## Scoop
+=== "Scoop"
 
-```bash
-scoop bucket add markcornick https://github.com/markcornick/scoop-bucket.git
-scoop install linenoise-classic
-```
+    ```bash
+    scoop bucket add markcornick https://github.com/markcornick/scoop-bucket.git
+    scoop install linenoise-classic
+    ```
 
-## Snap
+=== "Snap"
 
-```bash
-snap install linenoise-classic
-```
+    ```bash
+    snap install linenoise-classic
+    ```
 
-## Docker
+=== "Docker"
 
-```bash
-docker run --rm markcornick/linenoise-classic
-# or
-docker run --rm ghcr.io/markcornick/linenoise-classic
-```
+    ```bash
+    docker run --rm markcornick/linenoise-classic
+    # or
+    docker run --rm ghcr.io/markcornick/linenoise-classic
+    ```
 
-## Binaries and RPM/DEB/APK packages
+=== "Binaries and RPM/DEB/APK packages"
 
-[Here.](https://github.com/markcornick/linenoise-classic/releases)
-Checksums from that page are signed with [my GPG
-key](https://github.com/markcornick.gpg).
+    [Here.](https://github.com/markcornick/linenoise-classic/releases)
+    Checksums from that page are signed with [my GPG
+    key](https://github.com/markcornick.gpg).
