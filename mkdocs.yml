@@ -1,14 +1,41 @@
 ---
 copyright: Copyright &copy; 2017-2021 Mark Cornick
+extra:
+  social:
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/markcornick
+markdown_extensions:
+  - admonition
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
 nav:
   - Home: index.md
   - Installation: installation.md
   - Usage: usage.md
   - Contributing: contributing.md
+plugins:
+  - git-revision-date-localized
+  - minify:
+      minify_html: true
+  - search
 repo_name: markcornick/linenoise-classic
 repo_url: https://github.com/markcornick/linenoise-classic/
 site_author: Mark Cornick
 site_description: Generates strings that can be used as reasonably secure passwords
 site_name: linenoise-classic
 theme:
-  name: readthedocs
+  icon:
+    logo: material/book
+    repo: fontawesome/brands/github
+  name: material
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
